@@ -88,7 +88,7 @@ const IndividualResult = () => {
                                 Show individual result{" "}
                                 <NavLink
                                     className="font-bold"
-                                    to={"/guideline"}
+                                    to={"/guideline/individual"}
                                 >
                                     Guideline
                                 </NavLink>

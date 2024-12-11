@@ -18,7 +18,7 @@ const router = createBrowserRouter([
                 element:<IndividualResult></IndividualResult>
             },
             {
-                path:'/guideline',
+                path:'/guideline/individual',
                 element:<GuidLine></GuidLine>
             }
         ]
