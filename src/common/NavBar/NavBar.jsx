@@ -11,37 +11,67 @@ const NavBar = () => {
     const links = (
         <>
             <li>
-                <NavLink to={"/"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/"}
+                >
                     <RiHome9Line />
                     Home
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/individual"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/individual"}
+                >
                     <GrUserManager />
                     Individual Result
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/group"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/group"}
+                >
                     <RiGroupLine />
                     Group Result
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/instituteResult"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/instituteResult"}
+                >
                     <FaSchoolFlag />
                     Institute Result
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/notice"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/notice"}
+                >
                     <IoNotificationsCircleOutline />
                     Notice Board
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/cgpa"}>
+                <NavLink
+                    className={({ isActive }) =>
+                        isActive ? "bg-[#357ef0] text-white" : ""
+                    }
+                    to={"/cgpa"}
+                >
                     <SlCalculator />
                     CGPA Calculator
                 </NavLink>
@@ -80,7 +110,8 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-2xl font-bold">
-                    <img className="w-[40px] h-[40px]" src={logo} />Result Vhai
+                    <img className="w-[40px] h-[40px]" src={logo} />
+                    Result Vhai
                 </a>
             </div>
             <div className="hidden lg:flex">
