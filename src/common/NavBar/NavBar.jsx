@@ -26,7 +26,7 @@ const NavBar = () => {
                     className={({ isActive }) =>
                         isActive ? "bg-[#357ef0] text-white" : ""
                     }
-                    to={"/individual"}
+                    to={"/individualResult"}
                 >
                     <GrUserManager />
                     Individual Result
