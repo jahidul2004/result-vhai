@@ -5,6 +5,8 @@ import { RiGroupLine, RiHome9Line } from "react-icons/ri";
 import { SlCalculator } from "react-icons/sl";
 import { NavLink } from "react-router-dom";
 
+import logo from "../../assets/slack.png";
+
 const NavBar = () => {
     const links = (
         <>
@@ -77,7 +79,9 @@ const NavBar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl font-bold">Result Vhai</a>
+                <a className="btn btn-ghost text-2xl font-bold">
+                    <img className="w-[40px] h-[40px]" src={logo} />Result Vhai
+                </a>
             </div>
             <div className="hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold">
