@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/mainLayout/MainLayout";
-import Banner from "../pages/Banner/Banner";
 import IndividualResult from "../pages/InsividualResult/IndividualResult";
 import GuidLine from "../pages/guidline/GuidLine";
+import Home from "../layout/home/Home";
 
 const router = createBrowserRouter([
     {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Banner></Banner>
+                element:<Home></Home>
             },
             {
                 path:'/individualResult',
