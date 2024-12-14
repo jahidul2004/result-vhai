@@ -1,6 +1,5 @@
 import { FaFacebook, FaTelegram, FaYoutube } from "react-icons/fa6";
 import logo from "../../assets/slack.png";
-import { TiSocialYoutubeCircular } from "react-icons/ti";
 
 const Footer = () => {
     return (
@@ -18,7 +17,7 @@ const Footer = () => {
                 </p>
             </aside>
             <nav>
-                <div className="grid grid-flow-col gap-4 text-2xl text-[#008854]">
+                <div className="grid grid-flow-col gap-4 text-2xl text-[#357ef0]">
                     <a>
                         <FaFacebook />
                     </a>
