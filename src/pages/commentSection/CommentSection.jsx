@@ -10,7 +10,7 @@ const comments = [
 const CommentSection = () => {
     return (
         <div className="bg-gray-100 py-10">
-            <h1 className="text-4xl font-bold text-center text-[#357ef0] pb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-center text-[#357ef0] pb-10">
                 Community Feedback
             </h1>
             <div className="relative w-full overflow-hidden  flex items-center py-10">
