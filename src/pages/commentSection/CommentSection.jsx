@@ -33,7 +33,7 @@ const CommentSection = () => {
                                         Jahidul Islam Jihad
                                     </h1>
                                     <p className="font-semibold text-[#000000ab]">
-                                        Malibagh,Dhaka
+                                        Khilgaon,Dhaka
                                     </p>
                                 </div>
                             </div>
