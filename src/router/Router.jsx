@@ -3,25 +3,27 @@ import MainLayout from "../layout/mainLayout/MainLayout";
 import IndividualResult from "../pages/InsividualResult/IndividualResult";
 import GuidLine from "../pages/guidline/GuidLine";
 import Home from "../layout/home/Home";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
-        children:[
+        errorElement: <NotFound></NotFound>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: "/",
+                element: <Home></Home>,
             },
             {
-                path:'/individualResult',
-                element:<IndividualResult></IndividualResult>
+                path: "/individualResult",
+                element: <IndividualResult></IndividualResult>,
             },
             {
-                path:'/guideline/individual',
-                element:<GuidLine></GuidLine>
-            }
-        ]
+                path: "/guideline/individual",
+                element: <GuidLine></GuidLine>,
+            },
+        ],
     },
 ]);
 
