@@ -70,7 +70,7 @@ const NavBar = () => {
                     className={({ isActive }) =>
                         isActive ? "bg-[#357ef0] text-white" : ""
                     }
-                    to={"/cgpa"}
+                    to={"/cgpaCalculator"}
                 >
                     <SlCalculator />
                     CGPA Calculator

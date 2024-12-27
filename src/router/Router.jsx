@@ -4,6 +4,7 @@ import IndividualResult from "../pages/InsividualResult/IndividualResult";
 import GuidLine from "../pages/guidline/GuidLine";
 import Home from "../layout/home/Home";
 import NotFound from "../pages/NotFound/NotFound";
+import CGPACalc from "../pages/cgpaCalc/CgpaCalc";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
                 path: "/guideline/individual",
                 element: <GuidLine></GuidLine>,
             },
+            {
+                path:"cgpaCalculator",
+                element:<CGPACalc></CGPACalc>
+            }
         ],
     },
 ]);
