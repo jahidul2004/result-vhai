@@ -4,43 +4,43 @@ import { motion, AnimatePresence } from "framer-motion";
 const comments = [
     {
         image: "https://randomuser.me/api/portraits/men/1.jpg",
-        username: "John Doe",
-        location: "New York, USA",
+        username: "Forhad Ahmed",
+        location: "Sylhet, Bangladesh",
         commentText:
             "The product selection is great, but I would love to see more variety in the categories.",
     },
     {
         image: "https://randomuser.me/api/portraits/women/2.jpg",
-        username: "Sarah Smith",
-        location: "Los Angeles, USA",
+        username: "Jahirul Islam Joy",
+        location: "Noakhali, Bangladesh",
         commentText:
             "The website loads quickly, and I had no issues while browsing. Great job!",
     },
     {
         image: "https://randomuser.me/api/portraits/men/3.jpg",
-        username: "Michael Johnson",
-        location: "Toronto, Canada",
+        username: "Shihab",
+        location: "Dhaka, Bangladesh",
         commentText:
             "Customer support was very helpful when I had a query. Excellent service!",
     },
     {
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
-        username: "Emma Brown",
-        location: "London, UK",
+        image: "https://randomuser.me/api/portraits/men/4.jpg",
+        username: "Forhad Alam Asif",
+        location: "Dhaka, Bangladesh",
         commentText:
             "I found the checkout process a bit complicated. It could be simplified.",
     },
     {
         image: "https://randomuser.me/api/portraits/men/5.jpg",
-        username: "James Wilson",
-        location: "Sydney, Australia",
+        username: "ABD Abdullah",
+        location: "Barishal, Bangladesh",
         commentText:
             "Amazing user experience, I’ll definitely recommend this to my friends!",
     },
     {
         image: "https://randomuser.me/api/portraits/women/6.jpg",
         username: "Olivia Taylor",
-        location: "Auckland, New Zealand",
+        location: "Chattagram, Bangladesh",
         commentText:
             "More payment options would be great, but overall a fantastic service!",
     },
@@ -71,7 +71,7 @@ const CommentSection = () => {
                             animate={{ x: "0%", opacity: 1 }}
                             exit={{ x: "-100%", opacity: 0 }}
                             transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="border p-6 rounded-lg bg-[#357df01e] w-[50%] shadow-lg"
+                            className="border p-6 rounded-lg bg-[#357df01e] w-[95%] shadow-lg"
                         >
                             <div className="flex items-center gap-3">
                                 <div className="w-[60px] h-[60px] border-2 border-[#357ef0] rounded-full flex items-center justify-center overflow-hidden">

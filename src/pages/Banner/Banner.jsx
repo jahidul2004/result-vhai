@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import bannerLottie from "../../assets/lottie/bannerlottie.json";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -17,9 +18,9 @@ const Banner = () => {
                         Easily access your diploma results anytime, <br />{" "}
                         anywhere with our simple and fast platform.
                     </p>
-                    <button className="btn hover:text-[#357ef0] bg-[#357ef0] text-white font-bold">
+                    <Link to={"/individualResult"} className="btn hover:text-[#357ef0] bg-[#357ef0] text-white font-bold">
                         See Result
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

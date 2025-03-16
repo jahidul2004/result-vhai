@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
+import { Link, useParams } from "react-router-dom";
+import { Line } from "recharts";
 
 const Result = () => {
     const { roll } = useParams();
@@ -31,7 +33,7 @@ const Result = () => {
     }, [roll]);
 
     return (
-        <div className="w-[90%] md:container mx-auto my-10">
+        <div className="w-[90%] md:container mx-auto my-20">
             <h1 className="text-2xl md:text-3xl font-bold text-[#4680ee]">
                 Result of Roll: {roll}
             </h1>
@@ -47,7 +49,7 @@ const Result = () => {
                         .map(([key, value], index) => (
                             <div
                                 key={index}
-                                className="bg-gradient-to-r from-[#4680ee] to-[#6a9fef] shadow-lg p-6 rounded-lg text-center hover:scale-105 transition-all duration-300"
+                                className="bg-gradient-to-r from-[#4681ee5e] to-[#357df0] shadow-lg p-6 rounded-lg text-center hover:scale-105 transition-all duration-300"
                             >
                                 <p className="text-4xl font-extrabold text-white">
                                     {value}
@@ -57,6 +59,14 @@ const Result = () => {
                                 </h2>
                             </div>
                         ))}
+
+                    <Link
+                        className="btn mx-auto bg-[#4680ee] text-white"
+                        to={"/individualResult"}
+                    >
+                        <IoMdArrowRoundBack />
+                        Back
+                    </Link>
                 </div>
             )}
         </div>
