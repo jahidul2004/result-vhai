@@ -1,47 +1,100 @@
-import userIcon from "../../assets/slack.png";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const comments = [
-    "The product selection is great, but I would love to see more variety in the categories.",
-    "The website loads quickly, and I had no issues while browsing. Great job!",
-    "Customer support was very helpful when I had a query. Excellent service!",
-    "I found the checkout process a bit complicated. It could be simplified.",
+    {
+        image: "https://randomuser.me/api/portraits/men/1.jpg",
+        username: "John Doe",
+        location: "New York, USA",
+        commentText:
+            "The product selection is great, but I would love to see more variety in the categories.",
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/2.jpg",
+        username: "Sarah Smith",
+        location: "Los Angeles, USA",
+        commentText:
+            "The website loads quickly, and I had no issues while browsing. Great job!",
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/3.jpg",
+        username: "Michael Johnson",
+        location: "Toronto, Canada",
+        commentText:
+            "Customer support was very helpful when I had a query. Excellent service!",
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/4.jpg",
+        username: "Emma Brown",
+        location: "London, UK",
+        commentText:
+            "I found the checkout process a bit complicated. It could be simplified.",
+    },
+    {
+        image: "https://randomuser.me/api/portraits/men/5.jpg",
+        username: "James Wilson",
+        location: "Sydney, Australia",
+        commentText:
+            "Amazing user experience, I’ll definitely recommend this to my friends!",
+    },
+    {
+        image: "https://randomuser.me/api/portraits/women/6.jpg",
+        username: "Olivia Taylor",
+        location: "Auckland, New Zealand",
+        commentText:
+            "More payment options would be great, but overall a fantastic service!",
+    },
 ];
 
 const CommentSection = () => {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prevIndex) => (prevIndex + 1) % comments.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="bg-gray-100 py-10">
             <h1 className="text-3xl md:text-4xl font-bold text-center text-[#357ef0] pb-10">
                 Our Community Feedback
             </h1>
-            <div className="relative w-full overflow-hidden  flex items-center py-10">
-                <div className="flex animate-marquee">
-                    {comments.map((comment, index) => (
-                        <div
+            <div className="w-full flex justify-center overflow-hidden py-10">
+                <div className="relative w-[80%] flex justify-center">
+                    <AnimatePresence mode="wait">
+                        <motion.div
                             key={index}
-                            className="mx-4 border p-4 rounded-lg bg-[#357df01e]"
+                            initial={{ x: "100%", opacity: 0 }}
+                            animate={{ x: "0%", opacity: 1 }}
+                            exit={{ x: "-100%", opacity: 0 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
+                            className="border p-6 rounded-lg bg-[#357df01e] w-[50%] shadow-lg"
                         >
-                            <div className="flex items-center gap-2">
-                                <div className="w-[50px] h-[50px] border border-[#357ef0] rounded-full p-2 flex items-center justify-center">
+                            <div className="flex items-center gap-3">
+                                <div className="w-[60px] h-[60px] border-2 border-[#357ef0] rounded-full flex items-center justify-center overflow-hidden">
                                     <img
-                                        className="w-full h-full"
-                                        src={userIcon}
-                                        alt=""
+                                        className="w-full h-full object-cover"
+                                        src={comments[index].image}
+                                        alt="User Icon"
                                     />
                                 </div>
                                 <div>
                                     <h1 className="font-bold text-xl">
-                                        Jahidul Islam Jihad
+                                        {comments[index].username}
                                     </h1>
                                     <p className="font-semibold text-[#000000ab]">
-                                        Khilgaon,Dhaka
+                                        {comments[index].location}
                                     </p>
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <p>{comment}</p>
+                                <p>{comments[index].commentText}</p>
                             </div>
-                        </div>
-                    ))}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
         </div>

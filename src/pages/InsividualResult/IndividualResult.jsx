@@ -1,8 +1,18 @@
 import Lottie from "lottie-react";
 import individualLottie from "../../assets/lottie/ind.json";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const IndividualResult = () => {
+    const [roll, setRoll] = useState("");
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (roll) {
+            navigate(`/result/${roll}`);
+        }
+    };
     return (
         <div>
             <div className="hero bg-base-200 min-h-screen">
@@ -11,7 +21,7 @@ const IndividualResult = () => {
                         <Lottie animationData={individualLottie}></Lottie>
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl md:w-1/2 md:mr-20">
-                        <form className="card-body w-full">
+                        <form onSubmit={handleSubmit} className="card-body w-full">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">
@@ -23,7 +33,7 @@ const IndividualResult = () => {
                                     name=""
                                     id=""
                                 >
-                                    <option value="">
+                                    <option value="DIPLOMA+IN+ENGINEERING">
                                         Diploma In Engineering
                                     </option>
                                     <option value="">
@@ -68,9 +78,9 @@ const IndividualResult = () => {
                                     id=""
                                 >
                                     <option value="">Regulation</option>
-                                    <option value="">2010</option>
-                                    <option value="">2016</option>
-                                    <option value="">2022</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2022">2022</option>
                                 </select>
                             </div>
                             <div className="form-control">
@@ -81,6 +91,8 @@ const IndividualResult = () => {
                                     type="text"
                                     placeholder="Roll"
                                     className="input input-bordered"
+                                    value={roll}
+                                    onChange={(e) => setRoll(e.target.value)}
                                     required
                                 />
                             </div>
@@ -94,9 +106,12 @@ const IndividualResult = () => {
                                 </NavLink>
                             </p>
                             <div className="form-control mt-6">
-                                <button className="hover:text-[#357ef0] btn bg-[#357ef0] text-white font-bold">
+                                <Link
+                                    to={`/result/${roll}`}
+                                    className="hover:text-[#357ef0] btn bg-[#357ef0] text-white font-bold"
+                                >
                                     Show Result
-                                </button>
+                                </Link>
                             </div>
                         </form>
                     </div>

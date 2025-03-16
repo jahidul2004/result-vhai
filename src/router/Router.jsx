@@ -5,29 +5,19 @@ import GuidLine from "../pages/guidline/GuidLine";
 import Home from "../layout/home/Home";
 import NotFound from "../pages/NotFound/NotFound";
 import CGPACalc from "../pages/cgpaCalc/CgpaCalc";
+import Result from "../pages/result/Result";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout></MainLayout>,
-        errorElement: <NotFound></NotFound>,
+        element: <MainLayout />,
+        errorElement: <NotFound />,
         children: [
-            {
-                path: "/",
-                element: <Home></Home>,
-            },
-            {
-                path: "/individualResult",
-                element: <IndividualResult></IndividualResult>,
-            },
-            {
-                path: "/guideline/individual",
-                element: <GuidLine></GuidLine>,
-            },
-            {
-                path:"cgpaCalculator",
-                element:<CGPACalc></CGPACalc>
-            }
+            { path: "/", element: <Home /> },
+            { path: "/individualResult", element: <IndividualResult /> },
+            { path: "/guideline/individual", element: <GuidLine /> },
+            { path: "/cgpaCalculator", element: <CGPACalc /> },
+            { path: "/result/:roll", element: <Result /> },
         ],
     },
 ]);
